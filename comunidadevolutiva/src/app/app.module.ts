@@ -8,6 +8,7 @@ import { StartComponent } from './pages/start/start.component';
 import { LogoymenuComponent } from './components/logoymenu/logoymenu.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { SeccionProyectoComponent } from './components/seccion-proyecto/seccion-proyecto.component';
+import { SeccionMapaComponent } from './components/seccion-mapa/seccion-mapa.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SeccionProyectoComponent } from './components/seccion-proyecto/seccion-
     StartComponent,
     LogoymenuComponent,
     CarouselComponent,
-    SeccionProyectoComponent
+    SeccionProyectoComponent,
+    SeccionMapaComponent
   ],
   imports: [
     BrowserModule,

@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './components/encabezado/encabezado.component';
 import { StartComponent } from './pages/start/start.component';
+import { LogoymenuComponent } from './components/logoymenu/logoymenu.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EncabezadoComponent,
-    StartComponent
+    StartComponent,
+    LogoymenuComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,8 @@
 $bgColor: #0e7a73;
 $customPink: #f6c1bc;
 $customGrey: #c9c9c9;
+$customGreyLight: #adadad;
+$customGreyDark: #6e6e6e;
 
 //--bootstrap
 
@@ -70,6 +72,11 @@ html {
     border-radius: 0px;
 }
 
+hr {
+    border: 2.5px solid $customPink;
+    border-radius: 20px;
+}
+
 .mainblock-presentacion {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -77,10 +84,7 @@ html {
         color: $customPink;
         font-family: "Cera Pro";
     }
-    hr {
-        border: 2.5px solid $customPink;
-        border-radius: 20px;
-    }
+
     .formulario {
         background-color: $body-color;
         border-radius: 28px;
@@ -116,6 +120,43 @@ html {
     }
 }
 
+.mainblock-proyecto {
+    h2 {
+        color: $bgColor;
+    }
+    p {
+        color: $customGreyDark;
+    }
+    .proyecto-overlap {
+        padding-top: 14rem;
+    }
+    .proyecto-overlap-top {
+        margin-top: -44rem;
+    }
+    .proyecto-card-rounded {
+        background-color: white;
+        box-shadow: 3px 3px 40px #7474741a;
+        border-radius: 41px;
+        display: inline-block;
+        padding: 41px 30px;
+        text-align: center;
+    }
+    .proyecto-card, .proyecto-card-rounded {
+        .title {
+            display: inline-block;
+        }
+        .subtitle {
+            color: $customGreyLight;
+        }
+        p {
+            color: $customGreyDark;
+            margin-bottom: 0px;
+        }
+        i {
+            color: $customPink;
+        }
+    }
+}
 .mainblock-carousel {
     padding-left: 0px;
     padding-right: 0px;

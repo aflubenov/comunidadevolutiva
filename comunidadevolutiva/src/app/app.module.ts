@@ -7,6 +7,7 @@ import { EncabezadoComponent } from './components/encabezado/encabezado.componen
 import { StartComponent } from './pages/start/start.component';
 import { LogoymenuComponent } from './components/logoymenu/logoymenu.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { SeccionProyectoComponent } from './components/seccion-proyecto/seccion-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     EncabezadoComponent,
     StartComponent,
     LogoymenuComponent,
-    CarouselComponent
+    CarouselComponent,
+    SeccionProyectoComponent
   ],
   imports: [
     BrowserModule,

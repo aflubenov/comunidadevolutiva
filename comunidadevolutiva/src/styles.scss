@@ -87,6 +87,59 @@ hr {
     border-radius: 20px;
 }
 
+.mainblock-beneficios {
+    padding-top: 11.5rem;
+    padding-bottom: 2rem;
+    background-color: #fafafa;
+
+    .card-mapa {
+        background-color: white;
+        border-radius: 77px;
+        box-shadow: 0px 3px 99px #00000003;
+        padding: 3rem 5rem;
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+    img {
+        margin-bottom: 4rem;
+    }
+
+    h2 {
+        color: $bgGreen;
+    }
+    p {
+        color: $customGreyDark;
+        margin-bottom: 2rem;
+    }
+    i {
+        color: $bgGreen;
+        margin-right: 16px;
+    }
+    mark {
+        background-color: white;
+        color: $customPink;
+    }
+
+}
+.mainblock-filosofia {
+    .bgGranja {
+        background-image: url('assets/images/pexels-taryn-elliott-4540701.png');
+        background-position: center top -170px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h2 {
+        color: $bgGreen;
+    }
+    .text-content {
+        padding-top: 7rem;
+
+    }
+    p {
+        color: $customGreyDark;
+    }
+}
 .mainblock-mapa {
     padding-bottom: 7rem;
 

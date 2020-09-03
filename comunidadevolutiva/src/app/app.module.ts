@@ -9,6 +9,8 @@ import { LogoymenuComponent } from './components/logoymenu/logoymenu.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { SeccionProyectoComponent } from './components/seccion-proyecto/seccion-proyecto.component';
 import { SeccionMapaComponent } from './components/seccion-mapa/seccion-mapa.component';
+import { SeccionFilosofiaComponent } from './components/seccion-filosofia/seccion-filosofia.component';
+import { SeccionBeneficiosComponent } from './components/seccion-beneficios/seccion-beneficios.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SeccionMapaComponent } from './components/seccion-mapa/seccion-mapa.com
     LogoymenuComponent,
     CarouselComponent,
     SeccionProyectoComponent,
-    SeccionMapaComponent
+    SeccionMapaComponent,
+    SeccionFilosofiaComponent,
+    SeccionBeneficiosComponent
   ],
   imports: [
     BrowserModule,

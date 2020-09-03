@@ -11,6 +11,8 @@ import { SeccionProyectoComponent } from './components/seccion-proyecto/seccion-
 import { SeccionMapaComponent } from './components/seccion-mapa/seccion-mapa.component';
 import { SeccionFilosofiaComponent } from './components/seccion-filosofia/seccion-filosofia.component';
 import { SeccionBeneficiosComponent } from './components/seccion-beneficios/seccion-beneficios.component';
+import { SeccionServiciosyDiferencialesComponent } from './components/seccion-serviciosy-diferenciales/seccion-serviciosy-diferenciales.component';
+import { PiePaginaComponent } from './components/pie-pagina/pie-pagina.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { SeccionBeneficiosComponent } from './components/seccion-beneficios/secc
     SeccionProyectoComponent,
     SeccionMapaComponent,
     SeccionFilosofiaComponent,
-    SeccionBeneficiosComponent
+    SeccionBeneficiosComponent,
+    SeccionServiciosyDiferencialesComponent,
+    PiePaginaComponent
   ],
   imports: [
     BrowserModule,

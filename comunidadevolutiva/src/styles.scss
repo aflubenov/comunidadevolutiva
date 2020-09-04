@@ -134,7 +134,7 @@ hr {
     i {
         color: $customPink;
     }
-    h5 {
+    h6 {
         font-family: "Cera Pro";
     }
     .piefirma {
@@ -146,8 +146,6 @@ hr {
         padding-bottom: 1rem;
         text-align: center;
     }
-
-
 }
 
 .mainblock-servicios {
@@ -244,6 +242,39 @@ hr {
 .mainblock-mapa {
     padding-bottom: 7rem;
 
+    .card-pattern {
+
+        position: relative;
+        transform-style: preserve-3d;
+
+        &::before {
+            --p: 1;
+            --s: calc(1 - 2 * var(--p));
+            position: absolute;
+            left: -70px;
+            top: -50px;
+            -webkit-mask: var(--m);
+            mask: var(--m);
+            content: "";
+            width: 350px;
+            height: 200px;
+            transform: translateZ(-1px);
+        }
+
+        $s: 16px;
+
+        &::before {
+            background: linear-gradient(
+                    calc(var(--s) * 45deg), transparent calc(50% - 1px),
+                    $customPink 0, $customPink calc(50% + 2px),
+                    transparent 0
+                )
+                10px 16px / #{$s $s};
+            --m: linear-gradient(red 50%, transparent 50%) 0 calc(var(--p) *#{2 * $s}) / 100% #{ $s};
+        }
+    }
+
+
     .text-content {
         padding-top: 12rem;
     }
@@ -279,12 +310,48 @@ hr {
         margin-left: 10rem;
         margin-bottom: 5rem;
         border-radius: 33px;
-        background-position: right -145px bottom 0px;
+        background-position: right -95px bottom 0px;
     }
 }
 .mainblock-presentacion {
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 5rem;
+
+    .card-pattern {
+
+        position: relative;
+        transform-style: preserve-3d;
+
+        &::before {
+            --p: 1;
+            --s: calc(1 - 2 * var(--p));
+            position: absolute;
+            right: -70px;
+            bottom: -50px;
+            -webkit-mask: var(--m);
+            mask: var(--m);
+            content: "";
+            width: 350px;
+            height: 200px;
+            transform: translateZ(-1px);
+        }
+
+        $s: 16px;
+
+        &::before {
+            background: linear-gradient(
+                    calc(var(--s) * 45deg), transparent calc(50% - 1px),
+                    $customPink 0, $customPink calc(50% + 2px),
+                    transparent 0
+                )
+                10px 16px / #{$s $s};
+            --m: linear-gradient(red 50%, transparent 50%) 0 calc(var(--p) *#{2 * $s}) / 100% #{ $s};
+        }
+    }
+
+    .social-icons {
+        color: $customPink;
+    }
     .sabermas {
         color: $customPink;
         font-family: "Cera Pro";

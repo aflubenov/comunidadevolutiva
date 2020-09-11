@@ -26,7 +26,7 @@ $link-color: white;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 @font-face {
-    font-family: "Cera Pro Black";
+    font-family: $headings-font-family;
     src: url("assets/CeraPro-Black.eot");
     src: url("assets/CeraPro-Black.eot?#iefix") format("embedded-opentype"),
         url("assets/CeraPro-Black.woff") format("woff"), url("assets/CeraPro-Black.ttf") format("truetype");
@@ -34,7 +34,7 @@ $link-color: white;
     font-style: normal;
 }
 @font-face {
-    font-family: "Cera Pro";
+    font-family: $font-family-base;
     src: url("assets/CeraPro-Regular.eot");
     src: url("assets/CeraPro-Regular.eot?#iefix") format("embedded-opentype"),
         url("assets/CeraPro-Regular.woff") format("woff"), url("assets/CeraPro-Regular.ttf") format("truetype");
@@ -67,7 +67,6 @@ html {
 .greyandgreenbg {
     background-color: $bgGreen;
     @include media-breakpoint-up(lg) {
-
         background: linear-gradient(90deg, $bgGrey 41.6%, $bgGreen 41.6%);
     }
 }
@@ -103,7 +102,7 @@ hr {
         color: $customGreyDark;
     }
     h6 {
-        font-family: "Cera Pro";
+        font-family: $font-family-base;
         color: $customGreyDark;
         letter-spacing: 5px;
     }
@@ -120,7 +119,6 @@ hr {
                 i {
                     color: $customPink;
                 }
-
             }
         }
     }
@@ -144,7 +142,7 @@ hr {
         color: $customPink;
     }
     h6 {
-        font-family: "Cera Pro";
+        font-family: $font-family-base;
     }
     .piefirma {
         margin-top: 4rem;
@@ -208,7 +206,6 @@ hr {
 .mainblock-beneficios {
     @include media-breakpoint-up(lg) {
         padding-top: 11.5rem;
-
     }
     padding-bottom: 2rem;
     background-color: #fafafa;
@@ -269,7 +266,6 @@ hr {
         transform-style: preserve-3d;
 
         @include media-breakpoint-up(md) {
-
             &::before {
                 --p: 1;
                 --s: calc(1 - 2 * var(--p));
@@ -302,7 +298,6 @@ hr {
 
     .text-content {
         @include media-breakpoint-up(lg) {
-
             padding-top: 12rem;
         }
     }
@@ -341,8 +336,7 @@ hr {
         background-position: right -420px bottom 0px;
 
         @include media-breakpoint-up(xl) {
-            background-position: right 50% bottom 0px; 
-
+            background-position: right 50% bottom 0px;
         }
     }
 }
@@ -357,7 +351,6 @@ hr {
         position: relative;
         transform-style: preserve-3d;
         @include media-breakpoint-up(md) {
-
             &::before {
                 --p: 1;
                 --s: calc(1 - 2 * var(--p));
@@ -393,7 +386,7 @@ hr {
     }
     .sabermas {
         color: $customPink;
-        font-family: "Cera Pro";
+        font-family: $font-family-base;
     }
 
     .formulario {
@@ -412,7 +405,7 @@ hr {
         }
 
         h5 {
-            font-family: "Cera Pro";
+            font-family: $font-family-base;
         }
 
         form {
@@ -441,19 +434,43 @@ hr {
     p {
         color: $customGreyDark;
     }
-    .proyecto-overlap {
-        padding-top: 14rem;
-    }
-    .proyecto-overlap-top {
-        margin-top: -44rem;
-    }
+
+
     .proyecto-card-rounded {
         background-color: white;
-        box-shadow: 3px 3px 40px #7474741a;
-        border-radius: 41px;
         display: inline-block;
-        padding: 41px 30px;
+        width: 100%;
         text-align: center;
+        img {
+            width: 100%
+        }
+
+        @include media-breakpoint-up(sm) {
+            padding-left: 4rem;
+            text-align: left;
+            .title {
+                padding-left: 1.5rem;
+            }
+            img {
+                width: 50%;
+            }
+
+        }
+    }
+
+
+    .proyecto-card {
+        @include media-breakpoint-up(sm) {
+            img {
+                width: 50%;
+            }
+        }
+        @include media-breakpoint-up(lg) {
+            img {
+                width: 100%;
+            }
+        }
+
     }
     .proyecto-card,
     .proyecto-card-rounded {

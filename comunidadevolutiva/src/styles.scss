@@ -6,7 +6,6 @@ $bgGreenDark: #0a534f;
 $bgGrey: #eaeaea;
 $customPink: #f6c1bc;
 $customGrey: #c9c9c9;
-$customGreyLight: #adadad;
 $customGreyDark: #6e6e6e;
 
 //--bootstrap
@@ -27,7 +26,7 @@ $link-color: white;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 @font-face {
-    font-family: "Cera Pro Black";
+    font-family: $headings-font-family;
     src: url("assets/CeraPro-Black.eot");
     src: url("assets/CeraPro-Black.eot?#iefix") format("embedded-opentype"),
         url("assets/CeraPro-Black.woff") format("woff"), url("assets/CeraPro-Black.ttf") format("truetype");
@@ -35,7 +34,7 @@ $link-color: white;
     font-style: normal;
 }
 @font-face {
-    font-family: "Cera Pro";
+    font-family: $font-family-base;
     src: url("assets/CeraPro-Regular.eot");
     src: url("assets/CeraPro-Regular.eot?#iefix") format("embedded-opentype"),
         url("assets/CeraPro-Regular.woff") format("woff"), url("assets/CeraPro-Regular.ttf") format("truetype");
@@ -66,7 +65,10 @@ html {
 }
 
 .greyandgreenbg {
-    background: linear-gradient(90deg, $bgGrey 41.6%, $bgGreen 41.6%);
+    background-color: $bgGreen;
+    @include media-breakpoint-up(lg) {
+        background: linear-gradient(90deg, $bgGrey 41.6%, $bgGreen 41.6%);
+    }
 }
 .greybg {
     background-color: $bgGrey;
@@ -100,7 +102,7 @@ hr {
         color: $customGreyDark;
     }
     h6 {
-        font-family: "Cera Pro";
+        font-family: $font-family-base;
         color: $customGreyDark;
         letter-spacing: 5px;
     }
@@ -108,11 +110,15 @@ hr {
         position: relative;
 
         .decorator {
-            position: absolute;
-            top: -1rem;
-            left: -3rem;
-            i {
-                color: $customPink;
+            display: none;
+            @include media-breakpoint-up(md) {
+                display: block;
+                position: absolute;
+                top: -1rem;
+                left: -3rem;
+                i {
+                    color: $customPink;
+                }
             }
         }
     }
@@ -136,7 +142,7 @@ hr {
         color: $customPink;
     }
     h6 {
-        font-family: "Cera Pro";
+        font-family: $font-family-base;
     }
     .piefirma {
         margin-top: 4rem;
@@ -198,7 +204,9 @@ hr {
 }
 
 .mainblock-beneficios {
-    padding-top: 11.5rem;
+    @include media-breakpoint-up(lg) {
+        padding-top: 11.5rem;
+    }
     padding-bottom: 2rem;
     background-color: #fafafa;
 
@@ -206,7 +214,9 @@ hr {
         background-color: white;
         border-radius: 77px;
         box-shadow: 0px 3px 99px #00000003;
-        padding: 3rem 5rem;
+        @include media-breakpoint-up(lg) {
+            padding: 3rem 5rem;
+        }
         p {
             margin-bottom: 1rem;
         }
@@ -252,40 +262,44 @@ hr {
     padding-bottom: 7rem;
 
     .card-pattern {
-
         position: relative;
         transform-style: preserve-3d;
 
-        &::before {
-            --p: 1;
-            --s: calc(1 - 2 * var(--p));
-            position: absolute;
-            left: -70px;
-            top: -50px;
-            -webkit-mask: var(--m);
-            mask: var(--m);
-            content: "";
-            width: 350px;
-            height: 200px;
-            transform: translateZ(-1px);
-        }
+        @include media-breakpoint-up(md) {
+            &::before {
+                --p: 1;
+                --s: calc(1 - 2 * var(--p));
+                position: absolute;
+                left: -70px;
+                top: -50px;
+                -webkit-mask: var(--m);
+                mask: var(--m);
+                content: "";
+                width: 350px;
+                height: 200px;
+                transform: translateZ(-1px);
+            }
 
-        $s: 16px;
+            $s: 16px;
 
-        &::before {
-            background: linear-gradient(
-                    calc(var(--s) * 45deg), transparent calc(50% - 1px),
-                    $customPink 0, $customPink calc(50% + 2px),
-                    transparent 0
-                )
-                10px 16px / #{$s $s};
-            --m: linear-gradient(red 50%, transparent 50%) 0 calc(var(--p) *#{2 * $s}) / 100% #{ $s};
+            &::before {
+                background: linear-gradient(
+                        calc(var(--s) * 45deg),
+                        transparent calc(50% - 1px),
+                        $customPink 0,
+                        $customPink calc(50% + 2px),
+                        transparent 0
+                    )
+                    10px 16px / #{$s $s};
+                --m: linear-gradient(red 50%, transparent 50%) 0 calc(var(--p) *#{2 * $s}) / 100% #{$s};
+            }
         }
     }
 
-
     .text-content {
-        padding-top: 12rem;
+        @include media-breakpoint-up(lg) {
+            padding-top: 12rem;
+        }
     }
     .important-text {
         position: relative;
@@ -319,42 +333,51 @@ hr {
         margin-left: 10rem;
         margin-bottom: 5rem;
         border-radius: 33px;
-        background-position: right -0px bottom 0px;
+        background-position: right -420px bottom 0px;
+
+        @include media-breakpoint-up(xl) {
+            background-position: right 50% bottom 0px;
+        }
     }
 }
 .mainblock-presentacion {
     padding-top: 2rem;
     padding-bottom: 5rem;
 
+    h1 {
+        line-height: 3.5rem;
+    }
     .card-pattern {
-
         position: relative;
         transform-style: preserve-3d;
+        @include media-breakpoint-up(md) {
+            &::before {
+                --p: 1;
+                --s: calc(1 - 2 * var(--p));
+                position: absolute;
+                right: -70px;
+                bottom: -50px;
+                -webkit-mask: var(--m);
+                mask: var(--m);
+                content: "";
+                width: 350px;
+                height: 200px;
+                transform: translateZ(-1px);
+            }
 
-        &::before {
-            --p: 1;
-            --s: calc(1 - 2 * var(--p));
-            position: absolute;
-            right: -70px;
-            bottom: -50px;
-            -webkit-mask: var(--m);
-            mask: var(--m);
-            content: "";
-            width: 350px;
-            height: 200px;
-            transform: translateZ(-1px);
-        }
+            $s: 16px;
 
-        $s: 16px;
-
-        &::before {
-            background: linear-gradient(
-                    calc(var(--s) * 45deg), transparent calc(50% - 1px),
-                    $customPink 0, $customPink calc(50% + 2px),
-                    transparent 0
-                )
-                10px 16px / #{$s $s};
-            --m: linear-gradient(red 50%, transparent 50%) 0 calc(var(--p) *#{2 * $s}) / 100% #{ $s};
+            &::before {
+                background: linear-gradient(
+                        calc(var(--s) * 45deg),
+                        transparent calc(50% - 1px),
+                        $customPink 0,
+                        $customPink calc(50% + 2px),
+                        transparent 0
+                    )
+                    10px 16px / #{$s $s};
+                --m: linear-gradient(red 50%, transparent 50%) 0 calc(var(--p) *#{2 * $s}) / 100% #{$s};
+            }
         }
     }
 
@@ -363,7 +386,7 @@ hr {
     }
     .sabermas {
         color: $customPink;
-        font-family: "Cera Pro";
+        font-family: $font-family-base;
     }
 
     .formulario {
@@ -382,7 +405,7 @@ hr {
         }
 
         h5 {
-            font-family: "Cera Pro";
+            font-family: $font-family-base;
         }
 
         form {
@@ -395,6 +418,8 @@ hr {
         line-height: 2rem;
 
         mark {
+            padding-left: 0.7rem;
+            color: white;
             border-radius: 25px;
             background-color: $customPink;
         }
@@ -409,19 +434,43 @@ hr {
     p {
         color: $customGreyDark;
     }
-    .proyecto-overlap {
-        padding-top: 14rem;
-    }
-    .proyecto-overlap-top {
-        margin-top: -44rem;
-    }
+
+
     .proyecto-card-rounded {
         background-color: white;
-        box-shadow: 3px 3px 40px #7474741a;
-        border-radius: 41px;
         display: inline-block;
-        padding: 41px 30px;
+        width: 100%;
         text-align: center;
+        img {
+            width: 100%
+        }
+
+        @include media-breakpoint-up(sm) {
+            padding-left: 4rem;
+            text-align: left;
+            .title {
+                padding-left: 1.5rem;
+            }
+            img {
+                width: 50%;
+            }
+
+        }
+    }
+
+
+    .proyecto-card {
+        @include media-breakpoint-up(sm) {
+            img {
+                width: 50%;
+            }
+        }
+        @include media-breakpoint-up(lg) {
+            img {
+                width: 100%;
+            }
+        }
+
     }
     .proyecto-card,
     .proyecto-card-rounded {
@@ -429,7 +478,7 @@ hr {
             display: inline-block;
         }
         .subtitle {
-            color: $customGreyLight;
+            color: $customGrey;
         }
         p {
             color: $customGreyDark;
@@ -450,12 +499,15 @@ hr {
         .carousel-item-title {
             color: $bgGreen;
             letter-spacing: 6.4px;
+            text-align: center;
+            padding-top: 1rem;
+        }
+        .carousel-item-title-rotated {
             transform: rotate(-90deg);
             width: 500%;
             position: absolute;
             transform-origin: 0 0;
-            text-align: center;
-            padding-top: 4rem;
+            padding-top: 2rem;
         }
         .carousel-item-number {
             background-color: $customPink;

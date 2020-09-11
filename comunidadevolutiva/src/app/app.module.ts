@@ -14,6 +14,7 @@ import { SeccionBeneficiosComponent } from './components/seccion-beneficios/secc
 import { SeccionServiciosyDiferencialesComponent } from './components/seccion-serviciosy-diferenciales/seccion-serviciosy-diferenciales.component';
 import { PiePaginaComponent } from './components/pie-pagina/pie-pagina.component';
 import { SeccionSitaComponent } from './components/seccion-sita/seccion-sita.component';
+import { FomrularioContactoComponent } from './components/fomrulario-contacto/fomrulario-contacto.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SeccionSitaComponent } from './components/seccion-sita/seccion-sita.com
     SeccionBeneficiosComponent,
     SeccionServiciosyDiferencialesComponent,
     PiePaginaComponent,
-    SeccionSitaComponent
+    SeccionSitaComponent,
+    FomrularioContactoComponent
   ],
   imports: [
     BrowserModule,

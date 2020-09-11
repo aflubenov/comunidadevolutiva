@@ -344,6 +344,17 @@ hr {
     padding-top: 2rem;
     padding-bottom: 5rem;
 
+    .container-fluid-custom {
+        padding: 0px;
+        margin-right: -15px;
+        width: auto;
+        margin-left: -15px;
+        .formulario {
+            border-radius: 0px;
+            padding: 2rem;
+        }
+    }
+
     h1 {
         line-height: 3.5rem;
     }
@@ -435,14 +446,13 @@ hr {
         color: $customGreyDark;
     }
 
-
     .proyecto-card-rounded {
         background-color: white;
         display: inline-block;
         width: 100%;
         text-align: center;
         img {
-            width: 100%
+            width: 100%;
         }
 
         @include media-breakpoint-up(sm) {
@@ -454,10 +464,8 @@ hr {
             img {
                 width: 50%;
             }
-
         }
     }
-
 
     .proyecto-card {
         @include media-breakpoint-up(sm) {
@@ -470,7 +478,6 @@ hr {
                 width: 100%;
             }
         }
-
     }
     .proyecto-card,
     .proyecto-card-rounded {
